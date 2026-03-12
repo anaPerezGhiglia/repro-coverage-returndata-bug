@@ -1,0 +1,15 @@
+{
+  "name": "repro-coverage-returndata-bug",
+  "version": "1.0.0",
+  "description": "Minimal reproduction: Hardhat 3 coverage instrumentation overwrites returndata buffer in library functions",
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "hardhat": "^3.1.12",
+    "solc": "0.8.23"
+  },
+  "scripts": {
+    "test": "npx hardhat test solidity",
+    "test:coverage": "npx hardhat test solidity --coverage"
+  }
+}
