@@ -14,9 +14,9 @@ This breaks the common Solidity pattern of forwarding revert reasons via inline 
 ## Reproduction
 
 ```bash
-npm install
-npm test             # Both tests PASS
-npm run test:coverage  # Library variant FAILS
+pnpm install
+pnpm test             # Both tests PASS
+pnpm run test:coverage  # Library variant FAILS
 ```
 
 ### Expected behavior
