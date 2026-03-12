@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.23;
 
-/// @dev Forwards a call and re-reverts via inline assembly. PASSES under --coverage.
-contract InlineForwarder {
+/// @dev Forwards a call and re-reverts via returndatasize/returndatacopy in inline assembly.
+contract UnsafeForwarder {
     function forward(address target, bytes calldata data) external {
         // solhint-disable-next-line avoid-low-level-calls
         (bool success,) = target.call(data);
